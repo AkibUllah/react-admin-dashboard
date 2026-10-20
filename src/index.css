@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html.dark {
+    color-scheme: dark;
+  }
+  body {
+    @apply min-h-full;
+  }
+  ::selection {
+    @apply bg-brand-200 text-brand-900;
+  }
+}
+
+/* Recharts tooltip inherits page colours in dark mode. */
+.recharts-default-tooltip {
+  @apply !rounded-md !border-slate-200 !bg-white !text-sm dark:!border-slate-700 dark:!bg-slate-900;
+}
