@@ -1,3 +1,4 @@
+<!-- topics: react,typescript,vite,tailwindcss,tanstack-query,zustand,recharts,msw,admin-dashboard -->
 # ShopBD Admin Dashboard
 
 React 18 back office for a Bangladeshi e-commerce operation: KPIs, orders, customers, product catalogue and settings, running entirely in the browser on a deterministic mock API.
