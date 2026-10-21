@@ -10,6 +10,15 @@ React 18 back office for a Bangladeshi e-commerce operation: KPIs, orders, custo
 ![Node >= 18](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
+## Try it live
+
+| | |
+|---|---|
+| Live demo | https://akibullah.github.io/react-admin-dashboard/ — the real app on the MSW mock API; sign in with `admin@shopbd.test` / `password123` |
+| Run in your browser | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/AkibUllah/react-admin-dashboard?quickstart=1) — installs dependencies and starts the Vite dev server; open the forwarded port 5173 ("ShopBD Admin") |
+| One-click deploy | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/AkibUllah/react-admin-dashboard) — nginx image from the Dockerfile, health check on `/healthz` |
+| Local | `npm ci && npm run dev` or `docker build -t shopbd-admin . && docker run -p 8080:80 shopbd-admin` (see Quick Start) |
+
 ## Why this exists
 
 Every retail or POS backend I have built needed the same operations console on top of it: see today's numbers, find an order by number or phone, move it through its lifecycle, fix a product price. Those consoles tend to be written in a hurry and rot fast. This repository is the version I would start a client project from: the data-fetching, URL-driven table state, form validation, auth guard, theming and error handling are already solved, and because the API is mocked with MSW at the network level, the UI can be developed and demoed before the real backend exists and the same handlers double as test fixtures.

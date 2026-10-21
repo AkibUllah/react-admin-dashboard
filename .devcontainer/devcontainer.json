@@ -1,0 +1,26 @@
+{
+  "name": "react-admin-dashboard",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-18-bookworm",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb"
+  },
+  "postCreateCommand": "npm ci --no-audit --no-fund",
+  "postStartCommand": "nohup npm run dev -- --host 0.0.0.0 > /tmp/vite.log 2>&1 &",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "ShopBD Admin (Vite dev server)",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "vitest.explorer"
+      ]
+    }
+  }
+}
