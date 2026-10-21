@@ -10,6 +10,8 @@ async function enableMocks(): Promise<void> {
   await worker.start({
     onUnhandledRequest: 'bypass',
     quiet: true,
+    // The worker file is copied from public/ next to index.html, so it follows the build base path.
+    serviceWorker: { url: `${import.meta.env.BASE_URL}mockServiceWorker.js` },
   });
 }
 

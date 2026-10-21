@@ -36,4 +36,8 @@ export const routes = [
   },
 ];
 
-export const router = createBrowserRouter(routes);
+// Vite's BASE_URL is '/' locally and '/<repo>/' when built for GitHub Pages; the trailing slash is dropped
+// so React Router matches both '/<repo>' and '/<repo>/'.
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+
+export const router = createBrowserRouter(routes, { basename });
