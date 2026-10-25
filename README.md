@@ -4,6 +4,8 @@
 React 18 back office for a Bangladeshi e-commerce operation: KPIs, orders, customers, product catalogue and settings, running entirely in the browser on a deterministic mock API.
 
 [![CI](https://github.com/AkibUllah/react-admin-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/AkibUllah/react-admin-dashboard/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/AkibUllah/react-admin-dashboard/actions/workflows/codeql.yml/badge.svg)](https://github.com/AkibUllah/react-admin-dashboard/actions/workflows/codeql.yml)
+[![Release](https://img.shields.io/github/v/release/AkibUllah/react-admin-dashboard)](https://github.com/AkibUllah/react-admin-dashboard/releases)
 ![React 18.3](https://img.shields.io/badge/React-18.3-61dafb?logo=react&logoColor=white)
 ![TypeScript 5.4](https://img.shields.io/badge/TypeScript-5.4-3178c6?logo=typescript&logoColor=white)
 ![Vite 5](https://img.shields.io/badge/Vite-5-646cff?logo=vite&logoColor=white)
@@ -18,6 +20,20 @@ React 18 back office for a Bangladeshi e-commerce operation: KPIs, orders, custo
 | Run in your browser | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/AkibUllah/react-admin-dashboard?quickstart=1) — installs dependencies and starts the Vite dev server; open the forwarded port 5173 ("ShopBD Admin") |
 | One-click deploy | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/AkibUllah/react-admin-dashboard) — nginx image from the Dockerfile, health check on `/healthz` |
 | Local | `npm ci && npm run dev` or `docker build -t shopbd-admin . && docker run -p 8080:80 shopbd-admin` (see Quick Start) |
+
+## Screenshots
+
+![Signing in, browsing the dashboard, filtering orders and opening an order on the live demo](docs/images/demo.gif)
+
+*Live demo: sign in, dashboard KPIs, orders search and status filter, order detail, products, dark mode.*
+
+![Dashboard with KPI cards, 30-day revenue chart and orders by status](docs/images/dashboard.png)
+
+*Dashboard: KPI cards with 30-day deltas, revenue chart and orders-by-status breakdown.*
+
+![Order detail modal with line items and the allowed next statuses](docs/images/order-detail.png)
+
+*Order detail: line items in Taka and a status picker that only offers valid transitions.*
 
 ## Why this exists
 
@@ -196,11 +212,11 @@ A text UI walkthrough is in [docs/UI_WALKTHROUGH.md](docs/UI_WALKTHROUGH.md).
 
 ## Roadmap
 
-- Role-based UI: hide destructive actions for `support`, read-only mode for `manager` on settings.
-- Bulk actions on orders (export CSV, mark shipped) with optimistic updates.
-- Column visibility and saved views per user.
-- Bangla UI translation using `bangla-i18n` for numerals and dates.
-- Playwright smoke test against the production build in CI.
+- [ ] Role-based UI: hide destructive actions for `support`, read-only mode for `manager` on settings (#1)
+- [ ] Bulk actions on orders (export CSV, mark shipped) with optimistic updates (#2)
+- [ ] Column visibility and saved views per user (#3)
+- [ ] Bangla UI translation using `bangla-i18n` for numerals and dates (#4)
+- [ ] Playwright smoke test against the production build in CI (#5)
 
 ## License
 
