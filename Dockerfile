@@ -1,6 +1,6 @@
 # Build the static bundle, then serve it with nginx.
 # docker build -t shopbd-admin . && docker run --rm -p 8080:80 shopbd-admin
-FROM node:18-alpine AS build
+FROM node:26-alpine AS build
 WORKDIR /app
 COPY package.json package-lock.json ./
 RUN npm ci --no-audit --no-fund
